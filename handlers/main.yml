@@ -1,2 +1,2 @@
----
-# handlers file for nodenv
+- name: rehash
+  raw: 'NODENV_ROOT={{ nodenv.path }} {{ nodenv.path }}/bin/nodenv rehash'
