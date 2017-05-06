@@ -1,2 +1,11 @@
 ---
-# defaults file for nodenv
+env: system
+nodenv:
+  repo: https://github.com/nodenv/nodenv.git
+  path: "{{ '/usr/local/nodenv' if env == 'system' else '~/.nodenv' }}"
+
+plugins:
+  - { name: node-build, repo: 'https://github.com/nodenv/node-build.git' }
+
+rubies:
+  - version: 7.10.0
