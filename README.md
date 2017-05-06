@@ -21,8 +21,8 @@ env: system
 plugins:
   - { name: node-build, repo: 'https://github.com/nodenv/node-build.git' }
 
-pythons:
-  - version: 2.4.0
+nodes:
+  - version: 7.10.0
 ```
 
 Supported OS
