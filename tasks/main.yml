@@ -1,2 +1,18 @@
 ---
-# tasks file for nodenv
+- include: dependencies/debian.yml
+  when: ansible_os_family == 'Debian'
+
+- include: dependencies/centos.yml
+  when: ansible_distribution == "CentOS" or ansible_distribution == "Amazon"
+
+- include: install-nodenv.yml
+
+- name: Install plugins
+  include: install-plugin.yml
+  with_items:
+    - '{{ plugins }}'
+
+- name: Install nodes
+  include: install-node.yml
+  with_items:
+    - '{{ nodes }}'

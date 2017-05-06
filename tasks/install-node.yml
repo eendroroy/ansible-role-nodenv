@@ -1,0 +1,11 @@
+---
+- name: Check for {{ item.version }}
+  stat:
+    path: '{{ nodenv.path }}/versions/{{ item.version }}'
+  register: node
+  ignore_errors: yes
+
+- name: Install node {{ item.version }}
+  raw: 'NODENV_ROOT={{ nodenv.path }} {{ nodenv.path }}/bin/nodenv install {{ item.version }}'
+  notify: rehash
+  when: node.stat.exists == false

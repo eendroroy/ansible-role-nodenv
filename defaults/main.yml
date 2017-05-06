@@ -7,5 +7,5 @@ nodenv:
 plugins:
   - { name: node-build, repo: 'https://github.com/nodenv/node-build.git' }
 
-rubies:
+nodes:
   - version: 7.10.0
