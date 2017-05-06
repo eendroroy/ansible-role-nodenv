@@ -23,7 +23,7 @@ plugins:
 
 pythons:
   - version: 2.4.0
-
+```
 
 Supported OS
 ------------
