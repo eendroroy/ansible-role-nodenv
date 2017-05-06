@@ -19,7 +19,7 @@ Example:
 ```yml
 env: system
 plugins:
-  - { name: nodenv-build, repo: 'https://github.com/nodenv/nodenv-build.git' }
+  - { name: node-build, repo: 'https://github.com/nodenv/node-build.git' }
 
 pythons:
   - version: 2.4.0
