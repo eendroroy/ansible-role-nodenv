@@ -1,11 +1,11 @@
 ---
-env: system
+nodenv_env: system
 nodenv:
   repo: https://github.com/nodenv/nodenv.git
-  path: "{{ '/usr/local/nodenv' if env == 'system' else '~/.nodenv' }}"
+  path: "{{ '/usr/local/nodenv' if nodenv_env == 'system' else '~/.nodenv' }}"
 
-plugins:
-  - { name: node-build, repo: 'https://github.com/nodenv/node-build.git' }
+  plugins:
+    - { name: node-build, repo: 'https://github.com/nodenv/node-build.git' }
 
 nodes:
   - version: 7.10.0

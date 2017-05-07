@@ -8,18 +8,20 @@ Ansible role to install nodenv
 Role Variables
 --------------
 
-Set `env: system` to install nodenv system-wide, or `env: local` for local installation.
+Set `nodenv_env: system` to install nodenv system-wide, or `nodenv_env: local` for local installation.
 
-Add plugins under `plugins` var.
+Add plugins under `nodenv.plugins` var.
 
 Define python versions to install under `pythons` var.
 
 Example:
 
 ```yml
-env: system
-plugins:
-  - { name: node-build, repo: 'https://github.com/nodenv/node-build.git' }
+nodenv_env: system
+
+nodenv:
+  plugins:
+    - { name: node-build, repo: 'https://github.com/nodenv/node-build.git' }
 
 nodes:
   - version: 7.10.0
@@ -37,11 +39,9 @@ Supported OS
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
     - hosts: servers
       roles:
-         - { role: eendroroy.nodenv }
+         - { role: eendroroy.nodenv, nodenv_env: system }
 
 License
 -------

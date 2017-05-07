@@ -10,7 +10,7 @@
 - name: Install plugins
   include: install-plugin.yml
   with_items:
-    - '{{ plugins }}'
+    - '{{ nodenv.plugins }}'
 
 - name: Install nodes
   include: install-node.yml
