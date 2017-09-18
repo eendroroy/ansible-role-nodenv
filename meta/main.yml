@@ -4,7 +4,7 @@ galaxy_info:
   description: nodenv
   license: MIT
   min_ansible_version: 2.2.0
-  version: 0.0.1
+  version: 0.0.2
 
   platforms:
     - name: Ubuntu
@@ -13,6 +13,10 @@ galaxy_info:
         - saucy    # 13.10
         - trusty   # 14.04
         - xenial   # 16.04
+    - name: EL
+      versions:
+        - 6
+        - 7
 
   galaxy_tags:
     - development
