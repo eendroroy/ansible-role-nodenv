@@ -8,4 +8,4 @@ log/*
 hosts
 ssh_key
 ansible.cfg
-Vagrantfile
+
