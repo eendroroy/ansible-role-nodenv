@@ -8,4 +8,4 @@ nodenv:
     - { name: node-build, repo: 'https://github.com/nodenv/node-build.git' }
 
 nodes:
-  - version: 7.10.0
+  - version: 9.11.1
