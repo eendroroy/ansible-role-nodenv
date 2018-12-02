@@ -1,0 +1,21 @@
+---
+- name: Initial setup
+  hosts: vagrant
+  gather_facts: no
+
+  roles:
+    - { role: ../ansible-role-nodenv/vagrant/initial }
+
+- name: Role test [nodenv] < nodenv_env = local >
+  hosts: vagrant
+  vars:
+    - nodenv_env: local
+  roles:
+    - { role: ../ansible-role-nodenv }
+
+- name: Role test [nodenv] < nodenv_env = system >
+  hosts: vagrant
+  vars:
+    - pyenv_env: system
+  roles:
+    - { role: ../ansible-role-nodenv }

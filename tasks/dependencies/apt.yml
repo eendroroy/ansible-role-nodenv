@@ -1,21 +1,21 @@
 ---
 - name: Install dependencies for Ubuntu
   apt:
-    name: '{{ item }}'
-    state: installed
+    pkg:
+        - build-essential
+        - gcc
+        - git
+        - libcurl4-openssl-dev
+        - libffi-dev
+        - libreadline-dev
+        - libssl-dev
+        - libxml2-dev
+        - libxslt1-dev
+        - make
+        - zlib1g-dev
+    state: present
     force: yes
     update_cache: yes
     cache_valid_time: 3600
-  with_items:
-      - build-essential
-      - gcc
-      - git
-      - libcurl4-openssl-dev
-      - libffi-dev
-      - libreadline-dev
-      - libssl-dev
-      - libxml2-dev
-      - libxslt1-dev
-      - make
-      - zlib1g-dev
+
   become: true

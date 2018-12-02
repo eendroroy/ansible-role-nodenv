@@ -1,10 +1,7 @@
 ---
 - name: Install dependencies for Centos
   yum:
-    name: '{{ item }}'
-    state: installed
-    update_cache: yes
-  with_items:
+    pkg:
       - git
       - zlib
       - zlib-devel
@@ -23,4 +20,7 @@
       - bison
       - curl
       - sqlite-devel
+    state: present
+    update_cache: yes
+
   become: true

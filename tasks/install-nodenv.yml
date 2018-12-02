@@ -10,8 +10,8 @@
     file:
       path: '{{ nodenv.path }}'
       state: directory
-      group: '{{ remote_user }}'
-      owner: '{{ remote_user }}'
+      group: '{{ ansible_ssh_user }}'
+      owner: '{{ ansible_ssh_user }}'
     become: true
 
   - name: Clone nodenv

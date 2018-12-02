@@ -1,5 +1,20 @@
 ---
-- hosts: localhost
-  remote_user: root
+- name: Role test [nodenv] < nodenv_env = local >
+  hosts: localhost
+  connection: local
+
+  vars:
+    - nodenv_env: local
+
   roles:
-    - ..
+    - { role: ../ansible-role-nodenv }
+
+- name: Role test [nodenv] < nodenv_env = system >
+  hosts: localhost
+  connection: local
+
+  vars:
+    - nodenv_env: system
+
+  roles:
+    - { role: ../ansible-role-nodenv }
