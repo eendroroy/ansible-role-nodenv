@@ -70,7 +70,8 @@ nodes:
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at [ansible-role-nodenv](https://github.com/eendroroy/ansible-role-nodenv) repository.
-This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere
+to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Author
 

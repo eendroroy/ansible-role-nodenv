@@ -6,6 +6,7 @@ nodenv:
 
   plugins:
     - { name: node-build, repo: 'https://github.com/nodenv/node-build.git' }
+    - { name: nodenv-default-packages, repo: 'https://github.com/nodenv/nodenv-default-packages.git' }
 
 nodes:
-  - version: 9.11.1
+  - version: 11.10.1
